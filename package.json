@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "serve": "concurrently \"vite preview --port 10000\" \"json-server --watch data/db.json --port 3001\"",
-    "start": "npm run serve"
+    "start": "npm run build && node server.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
