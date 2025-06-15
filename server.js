@@ -22,7 +22,7 @@ app.get("*", (_, res) => {
 });
 
 // Porta de produção (Render usa process.env.PORT)
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
