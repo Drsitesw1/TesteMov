@@ -1,0 +1,105 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 31 41% 20%; /* #1f2937 - cinza escuro para texto */
+
+    --card: 0 0% 100%;
+    --card-foreground: 31 41% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 31 41% 20%;
+
+    --primary: 221 83% 53%; /* #2563EB */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%; /* #f8f9fa */
+    --secondary-foreground: 31 41% 20%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 220 14% 96%;
+    --accent-foreground: 31 41% 20%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%; /* border-gray-200 */
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 100%; /* branco */
+    --sidebar-foreground: 31 41% 20%; /* cinza escuro */
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 31 41% 20%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 221 83% 53%;
+  }
+
+  .dark {
+    /* Main backgrounds - #121212 for main, #1E1E1E for sidebar */
+    --background: 0 0% 7.1%; /* #121212 */
+    --foreground: 0 0% 94.1%; /* #f0f0f0 */
+
+    /* Cards and sections - #1C1C1C background, #2A2A2A borders */
+    --card: 0 0% 11%; /* #1C1C1C */
+    --card-foreground: 0 0% 94.1%; /* #f0f0f0 */
+
+    --popover: 0 0% 11%; /* #1C1C1C */
+    --popover-foreground: 0 0% 94.1%; /* #f0f0f0 */
+
+    /* Primary colors - blue #2563EB */
+    --primary: 221 83% 53%; /* #2563EB */
+    --primary-foreground: 0 0% 100%; /* #ffffff */
+
+    /* Secondary backgrounds */
+    --secondary: 0 0% 16.5%; /* #2A2A2A */
+    --secondary-foreground: 0 0% 80%; /* #cccccc */
+
+    --muted: 0 0% 16.5%; /* #2A2A2A */
+    --muted-foreground: 0 0% 80%; /* #cccccc */
+
+    --accent: 0 0% 16.5%; /* #2A2A2A */
+    --accent-foreground: 0 0% 94.1%; /* #f0f0f0 */
+
+    /* Destructive - red #EF4444 */
+    --destructive: 0 84% 60%; /* #EF4444 */
+    --destructive-foreground: 0 0% 100%; /* #ffffff */
+
+    /* Borders and inputs */
+    --border: 0 0% 16.5%; /* #2A2A2A */
+    --input: 0 0% 16.5%; /* #2A2A2A */
+    --ring: 221 83% 53%; /* #2563EB */
+    
+    /* Sidebar specific - #1E1E1E */
+    --sidebar-background: 0 0% 11.8%; /* #1E1E1E */
+    --sidebar-foreground: 0 0% 94.1%; /* #f0f0f0 */
+    --sidebar-primary: 221 83% 53%; /* #2563EB */
+    --sidebar-primary-foreground: 0 0% 100%; /* #ffffff */
+    --sidebar-accent: 0 0% 16.5%; /* #2A2A2A */
+    --sidebar-accent-foreground: 0 0% 94.1%; /* #f0f0f0 */
+    --sidebar-border: 0 0% 16.5%; /* #2A2A2A */
+    --sidebar-ring: 221 83% 53%; /* #2563EB */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

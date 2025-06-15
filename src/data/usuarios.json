@@ -1,0 +1,7 @@
+
+[
+  { "usuario": "admin", "senha": "Mov@2025", "nivel": "admin", "unidade": "TI" },
+  { "usuario": "itajai", "senha": "Mov@2025", "nivel": "usuario", "unidade": "Itajaí" },
+  { "usuario": "suape", "senha": "Mov@2025", "nivel": "usuario", "unidade": "Suape" },
+  { "usuario": "guaruja", "senha": "Mov@2025", "nivel": "usuario", "unidade": "Guarujá" }
+]

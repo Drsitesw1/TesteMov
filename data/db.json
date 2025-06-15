@@ -1,0 +1,83 @@
+
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Notebook Dell Inspiron",
+      "category": "Eletrônicos",
+      "description": "Notebook Dell Inspiron 15 com processador Intel i5",
+      "currentStock": 15,
+      "minStock": 5,
+      "unit": "unidade",
+      "costPrice": 2500.00,
+      "tags": ["Intel i5", "8GB RAM", "SSD 256GB"],
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop",
+      "userId": "itajai"
+    },
+    {
+      "id": "2",
+      "name": "Mouse Logitech MX",
+      "category": "Periféricos",
+      "description": "Mouse wireless Logitech MX Master 3",
+      "currentStock": 3,
+      "minStock": 10,
+      "unit": "unidade",
+      "costPrice": 350.00,
+      "tags": ["Wireless", "Ergonômico", "USB-C"],
+      "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=300&fit=crop",
+      "userId": "suape"
+    },
+    {
+      "id": "3",
+      "name": "Teclado Mecânico",
+      "category": "Periféricos",
+      "description": "Teclado mecânico RGB com switches Cherry MX",
+      "currentStock": 25,
+      "minStock": 8,
+      "unit": "unidade",
+      "costPrice": 450.00,
+      "tags": ["RGB", "Cherry MX", "ABNT2"],
+      "image": "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&h=300&fit=crop",
+      "userId": "guaruja"
+    },
+    {
+      "id": "4",
+      "name": "Monitor Samsung 24\"",
+      "category": "Eletrônicos",
+      "description": "Monitor Samsung 24 polegadas Full HD",
+      "currentStock": 8,
+      "minStock": 3,
+      "unit": "unidade",
+      "costPrice": 800.00,
+      "tags": ["24\"", "Full HD", "HDMI"],
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=300&fit=crop",
+      "userId": "admin"
+    }
+  ],
+  "movements": [
+    {
+      "id": "1",
+      "productId": "1",
+      "productName": "Notebook Dell Inspiron",
+      "type": "entry",
+      "quantity": 10,
+      "reason": "Compra",
+      "date": "2024-06-10",
+      "observations": "Lote inicial",
+      "timestamp": 1717785600000,
+      "userId": "itajai"
+    },
+    {
+      "id": "2",
+      "productId": "2",
+      "productName": "Mouse Logitech MX",
+      "type": "exit",
+      "quantity": 7,
+      "reason": "Distribuição",
+      "date": "2024-06-12",
+      "observations": "Distribuído para filiais",
+      "timestamp": 1717958400000,
+      "userId": "suape"
+    }
+  ]
+}
