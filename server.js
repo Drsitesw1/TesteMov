@@ -1,29 +1,28 @@
-import jsonServer from 'json-server';
-import path from 'path';
-import express from 'express';
-import { fileURLToPath } from 'url';
+import express from "express";
+import jsonServer from "json-server";
+import path from "path";
+import { fileURLToPath } from "url";
 
-// Como está usando "type": "module" no package.json, precisa disso pra __dirname funcionar
+const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const app = express();
+// Caminho para os arquivos de build do Vite
+const distPath = path.join(__dirname, "dist");
+app.use(express.static(distPath));
 
+// json-server com db.json
+const router = jsonServer.router("data/db.json");
 const middlewares = jsonServer.defaults();
-const router = jsonServer.router(path.join(__dirname, 'data', 'db.json'));
+app.use("/api", middlewares, router);
 
-// Serve os arquivos estáticos do front (build do Vite está na pasta 'dist')
-app.use(express.static(path.join(__dirname, 'dist')));
-
-// Rota da API /api para json-server
-app.use('/api', middlewares, router);
-
-// Redireciona todas as outras requisições para o index.html (SPA)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+// SPA: redireciona tudo para index.html
+app.get("*", (_, res) => {
+  res.sendFile(path.join(distPath, "index.html"));
 });
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+// Porta de produção (Render usa process.env.PORT)
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
